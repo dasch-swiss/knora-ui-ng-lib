@@ -1,0 +1,21 @@
+/* Overwrite the default color with DaSCH's purple. */
+.md-header,
+.md-tabs {
+  background-color: rgb(89, 73, 167) !important;
+}
+
+.md-nav--primary .md-nav__item--active > .md-nav__link {
+  color: rgb(89, 73, 167) !important;
+}
+
+/* Overwrite the default color in sidebar's header on mobile devices. */
+@media screen and (max-width: 76.1875em) {
+  .md-sidebar .md-nav__title,
+  .md-nav__source {
+    background-color: rgb(89, 73, 167) !important;
+  }
+
+  .md-sidebar .md-nav__title {
+    color: white !important;
+  }
+}

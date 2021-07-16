@@ -1,0 +1,1518 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/icons/dasch-favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.1">
+    
+    
+      
+        <title>Design Documentation - DSP-UI documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f72e892.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/style/theme.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#design-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="DSP-UI documentation" class="md-header-nav__button md-logo" aria-label="DSP-UI documentation">
+      
+  <img src="../../assets/icons/dasch-icon-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            DSP-UI documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Design Documentation
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/dasch-swiss/dsp-ui-lib/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dasch-swiss/dsp-ui-lib
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Introduction
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../how-to-use/getting-started/" class="md-tabs__link">
+          User Guide
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../" class="md-tabs__link md-tabs__link--active">
+          Contribution
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DSP-UI documentation" class="md-nav__button md-logo" aria-label="DSP-UI documentation">
+      
+  <img src="../../assets/icons/dasch-icon-white.svg" alt="logo">
+
+    </a>
+    DSP-UI documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/dasch-swiss/dsp-ui-lib/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dasch-swiss/dsp-ui-lib
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      User Guide
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        User Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Core module
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Core module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        Core module
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/core/" title="Introduction Core" class="md-nav__link">
+      Introduction Core
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Viewer module
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Viewer module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        Viewer module
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/viewer/" title="Introduction Viewer" class="md-nav__link">
+      Introduction Viewer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/viewer/search-results/" title="Search-results" class="md-nav__link">
+      Search-results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      Search module
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Search module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon"></span>
+        Search module
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/search/" title="Introduction Search" class="md-nav__link">
+      Introduction Search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/search/search-panel/" title="Search-panel" class="md-nav__link">
+      Search-panel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/search/fulltext-search/" title="Fulltext search" class="md-nav__link">
+      Fulltext search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/search/advanced-search/" title="Advanced search" class="md-nav__link">
+      Advanced search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/search/expert-search/" title="Expert search" class="md-nav__link">
+      Expert search
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Action module
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Action module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        <span class="md-nav__icon md-icon"></span>
+        Action module
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/action/" title="Introduction Action" class="md-nav__link">
+      Introduction Action
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/action/admin-image/" title="AdminImage" class="md-nav__link">
+      AdminImage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/action/existing-name/" title="ExistingName" class="md-nav__link">
+      ExistingName
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/action/key/" title="Key" class="md-nav__link">
+      Key
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/action/message/" title="Message" class="md-nav__link">
+      Message
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/action/progress-indicator/" title="Progress indicator" class="md-nav__link">
+      Progress indicator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/action/sort-button/" title="SortButton" class="md-nav__link">
+      SortButton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/action/stringify-string-literal/" title="StringifyStringLiteral" class="md-nav__link">
+      StringifyStringLiteral
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../how-to-use/action/truncate/" title="Truncate" class="md-nav__link">
+      Truncate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Contribution
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Contribution" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Contribution
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="How to contribute" class="md-nav__link">
+      How to contribute
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Design Documentation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Design Documentation" class="md-nav__link md-nav__link--active">
+      Design Documentation
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#action-module" class="md-nav__link">
+    Action Module
+  </a>
+  
+    <nav class="md-nav" aria-label="Action Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipes" class="md-nav__link">
+    Pipes
+  </a>
+  
+    <nav class="md-nav" aria-label="Pipes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#array-tranformation" class="md-nav__link">
+    Array Tranformation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatting" class="md-nav__link">
+    Formatting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-transformation" class="md-nav__link">
+    String Transformation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewer-module" class="md-nav__link">
+    Viewer Module
+  </a>
+  
+    <nav class="md-nav" aria-label="Viewer Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-view-component" class="md-nav__link">
+    Resource View Component
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crud-ui-components" class="md-nav__link">
+    CRUD UI Components
+  </a>
+  
+    <nav class="md-nav" aria-label="CRUD UI Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#value-components" class="md-nav__link">
+    Value Components
+  </a>
+  
+    <nav class="md-nav" aria-label="Value Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abstract-base-class" class="md-nav__link">
+    Abstract Base Class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    Validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-and-complex-values" class="md-nav__link">
+    Simple and Complex Values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operation-components" class="md-nav__link">
+    Operation Components
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-of-ckeditor" class="md-nav__link">
+    Integration of CKEditor
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration of CKEditor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-setup" class="md-nav__link">
+    General Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-internal-links-when-displaying-text" class="md-nav__link">
+    Handling Internal Links When Displaying Text
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-of-the-matdatepicker" class="md-nav__link">
+    Integration of the MatDatepicker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-module" class="md-nav__link">
+    Search Module
+  </a>
+  
+    <nav class="md-nav" aria-label="Search Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-panel" class="md-nav__link">
+    Search-panel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fulltext-search" class="md-nav__link">
+    Fulltext search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expert-search" class="md-nav__link">
+    Expert search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-search" class="md-nav__link">
+    Advanced search
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#component-interaction" class="md-nav__link">
+    Component Interaction
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Interaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursive-use-of-resourceandpropertyselectioncomponent" class="md-nav__link">
+    Recursive Use of ResourceAndPropertySelectionComponent
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#form-validation" class="md-nav__link">
+    Form Validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-generation" class="md-nav__link">
+    Query Generation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docs-documentation/" title="Docs Documentation" class="md-nav__link">
+      Docs Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../release-notes/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#action-module" class="md-nav__link">
+    Action Module
+  </a>
+  
+    <nav class="md-nav" aria-label="Action Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipes" class="md-nav__link">
+    Pipes
+  </a>
+  
+    <nav class="md-nav" aria-label="Pipes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#array-tranformation" class="md-nav__link">
+    Array Tranformation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatting" class="md-nav__link">
+    Formatting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-transformation" class="md-nav__link">
+    String Transformation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewer-module" class="md-nav__link">
+    Viewer Module
+  </a>
+  
+    <nav class="md-nav" aria-label="Viewer Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-view-component" class="md-nav__link">
+    Resource View Component
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crud-ui-components" class="md-nav__link">
+    CRUD UI Components
+  </a>
+  
+    <nav class="md-nav" aria-label="CRUD UI Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#value-components" class="md-nav__link">
+    Value Components
+  </a>
+  
+    <nav class="md-nav" aria-label="Value Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abstract-base-class" class="md-nav__link">
+    Abstract Base Class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation" class="md-nav__link">
+    Validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-and-complex-values" class="md-nav__link">
+    Simple and Complex Values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operation-components" class="md-nav__link">
+    Operation Components
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-of-ckeditor" class="md-nav__link">
+    Integration of CKEditor
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration of CKEditor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-setup" class="md-nav__link">
+    General Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handling-internal-links-when-displaying-text" class="md-nav__link">
+    Handling Internal Links When Displaying Text
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-of-the-matdatepicker" class="md-nav__link">
+    Integration of the MatDatepicker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-module" class="md-nav__link">
+    Search Module
+  </a>
+  
+    <nav class="md-nav" aria-label="Search Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-panel" class="md-nav__link">
+    Search-panel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fulltext-search" class="md-nav__link">
+    Fulltext search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expert-search" class="md-nav__link">
+    Expert search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-search" class="md-nav__link">
+    Advanced search
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#component-interaction" class="md-nav__link">
+    Component Interaction
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Interaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursive-use-of-resourceandpropertyselectioncomponent" class="md-nav__link">
+    Recursive Use of ResourceAndPropertySelectionComponent
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#form-validation" class="md-nav__link">
+    Form Validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-generation" class="md-nav__link">
+    Query Generation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/dasch-swiss/dsp-ui-lib/blob/main/docs/how-to-contribute/design-documentation.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="design-documentation">Design Documentation</h1>
+<h2 id="action-module">Action Module</h2>
+<p>The action module contains various directives, components, and pipes which can be used with ease by other parts of the library.</p>
+<h3 id="pipes">Pipes</h3>
+<h4 id="array-tranformation">Array Tranformation</h4>
+<p>Any pipe relating to the transformation of arrays must be placed in the folder called "array-transformation". Examples include reversing or sorting an array.</p>
+<h4 id="formatting">Formatting</h4>
+<p>Any pipe relating to formatting must be placed in the folder called "formatting". Examples include returning a string depending on the value of a boolean or returning a formatted date.</p>
+<h4 id="string-transformation">String Transformation</h4>
+<p>Any pipe relating to the transformation of strings must be placed in the folder called "string-transformation". For example, a pipe that truncates a string after a certain amount of characters.</p>
+<h2 id="viewer-module">Viewer Module</h2>
+<h3 id="resource-view-component">Resource View Component</h3>
+<p>The <code>ResourceViewComponent</code> initially gets a resource and passes the retrieved information to its child components to deal with the values.
+As the user adds more values, edits existing ones etc., these changes are reflected in <code>ResourceViewComponent.resPropInfoVals</code>.
+<em>This means the <code>ResourceViewComponent.resource</code> that was initially retrieved still represents the state of the past since its values are not updated.</em>
+Therefore, <code>ResourceViewComponent.resPropInfoVals</code> is used solely to represent a resource's values in the template.</p>
+<p>When updating, adding, or deleting an XML text value, an additional request is performed to retrieve the resource's standoff link values
+which are then updated in <code>ResourceViewComponent.resPropInfoVals</code>.</p>
+<h3 id="crud-ui-components">CRUD UI Components</h3>
+<p>The viewer module provides components to perform CRUD operations.
+These are split into two groups called <strong>value</strong> and <strong>operation</strong> components.
+The value components deal with the specifics of each value type supported by DSP-API,
+the operation components deal with the actual CRUD operations.
+With the current design, an operation component can be written in a generic way so that it supports all value types.
+Therefore, there is no need to write value specific operation components.</p>
+<h4 id="value-components">Value Components</h4>
+<h5 id="abstract-base-class">Abstract Base Class</h5>
+<p>An Angular component per value type has been created. Each of these components is a subclass of the abstract class <code>BaseValueComponent</code>.
+A value component knows how to display a value of a given type in the UI and how to update it or create a new value interacting with a user in the UI.</p>
+<p>The base class defines the following members
+(some of them are declared as abstract and have to be implemented in the value components.):</p>
+<ul>
+<li><code>@Input abstract displayValue?: ReadValue</code>: value to be displayed and/or updated, if any. The value has to be a subclass of <code>ReadValue</code>.</li>
+<li><code>@Input</code> <code>mode: 'read' | 'update' | 'create' | 'search'</code>: sets the mode of the value component.</li>
+<li><code>@Input() valueRequiredValidator?</code>: controls if the value should be required. Defaults to true.</li>
+<li>members <code>abstract valueFormControl: FormControl</code> for the value and <code>abstract commentFormControl: FormControl</code> its comment.</li>
+<li><code>abstract getInitValue(): any</code>: gets the value from the displayValue, if any.</li>
+<li><code>getInitComment: : string | null</code> gets the comment from displayValue, if any.</li>
+<li><code>standardValidatorFunc(val: any, comment: string, commentCtrl: FormControl): ValidatorFn</code>:
+generates a validator that checks if the value changed by the user is different from the existing version (in update mode):
+the comment has to at least be different from the previous version for the value to be valid.</li>
+<li><code>standardValueComparisonFunc(initValue: any, curValue: any): boolean</code>: method called by <code>standardValidatorFunc</code> that checks two given values for equality.
+This method has to be overridden for complex types (e.g., an interval, which is represented as an object).</li>
+<li><code>abstract customValidators: ValidatorFn[]</code>: contains validators for type checking (e.g, to check that a number is an integer).</li>
+<li><code>resetFormControl(): void</code> resets the values in the <code>FormControl</code>s and the validators for the given <code>mode</code> and <code>displayValue</code>.</li>
+<li><code>abstract getNewValue(): CreateValue | false</code> gets a new value from the form.</li>
+<li><code>abstract getUpdatedValue(): UpdateValue | false</code> gets an updated value from the form.</li>
+<li><code>isEmptyVal(): boolean</code>: checks if the value is empty.</li>
+</ul>
+<p>Each value component contains the necessary logic to convert between a <code>ReadValue</code> and the representation in the UI
+as well as to convert between an edited value in the UI and a <code>UpdateValue</code> or <code>CreateValue</code>.</p>
+<h5 id="validation">Validation</h5>
+<p>Each value component creates a form and sets the appropriate validators that can be data type specific.
+By default, a value is required and cannot be empty, i.e., the <code>Validators.required</code> is set.
+The default behaviour can be changed by setting <code>@Input: valueRequiredValidator</code> to false,
+in which case empty values are allowed.</p>
+<p>Note that the method <code>getNewValue()</code> will filter out empty values,
+i.e., return <code>false</code> instead of an instance of <code>CreateValue</code>.</p>
+<p>This is used in the event that a user should be able to submit a form without filling out every form field.</p>
+<h5 id="simple-and-complex-values">Simple and Complex Values</h5>
+<p><code>BaseValueComponent</code> handles most of the logic needed for simple values such as an integer or a URI value.
+A value is considered simple if it can be represented with a primitive type in the <code>FormControl</code>.
+An integer value, for instance, can simply be represented as a number in TypeScript.
+Complex types, however, have to be represented as an object in the <code>FormControl</code>.
+An interval, for example, is an object with a start and end that is set in the <code>FormControl</code>.
+To handle this complexity in the template, the interface <a href="https://material.angular.io/guide/creating-a-custom-form-field-control"><code>ControlValueAccessor</code></a> has to be implemented.
+<code>ControlValueAccessor</code> allows the delegation of the complexity to a dedicated component that can communicate with the <code>FormControl</code>.</p>
+<p>Complex values have a so-called "wrapped component" implementing <code>ControlValueAccessor</code> in which they pass the complex value to.</p>
+<p>An integer value can be handled directly in the value component's template:</p>
+<pre><code class="language-html">&lt;input matInput [formControlName]=&quot;'intValue'&quot; class=&quot;value&quot; placeholder=&quot;Int value&quot; type=&quot;number&quot;&gt;
+</code></pre>
+<p>In the case of an interval, the value component delegates the complex value to a dedicated component:</p>
+<pre><code class="language-html">&lt;dsp-interval-input [formControlName]=&quot;'intervalValue'&quot; class=&quot;value&quot; placeholder=&quot;Interval value&quot;&gt;&lt;/dsp-interval-input&gt;
+</code></pre>
+<p><code>IntervalInputComponent</code> thus receives an object <code>Interval</code> that it handles in its value setter and getter to communicate with the parent <code>FormControl</code>'s value:</p>
+<pre><code class="language-ts">@Input()
+  get value(): Interval | null {
+    const userInput = this.form.value;
+    if (userInput.start !== null &amp;&amp; userInput.end !== null) {
+      return new Interval(userInput.start, userInput.end);
+    }
+    return null;
+  }
+
+  set value(interval: Interval | null) {
+    if (interval !== null) {
+      this.form.setValue({start: interval.start, end: interval.end});
+    } else {
+      this.form.setValue({start: null, end: null});
+    }
+    this.stateChanges.next();
+  }
+</code></pre>
+<p><code>IntervalInputComponent</code> defines its own <code>FormControl</code>s for the interval's start and end.
+Since these are primitive values (numbers), they can be handled directly in the template.</p>
+<p>In some cases, primitive values also need to be handled using <code>ControlValueAccessor</code>.
+This is <a href="https://indepth.dev/never-again-be-confused-when-implementing-controlvalueaccessor-in-angular-forms/">necessary</a> in the case of the color value because a third-party lib is used.</p>
+<h4 id="operation-components">Operation Components</h4>
+<p>Operation components work with any value. They control the value components' inputs <code>displayValue</code> and <code>mode</code>.
+They are responsible for the communication with the DSP-API using <code>@dasch-swiss/dsp-js</code> when updating or creating a value.</p>
+<p><code>DisplayEditComponent</code> is an operation component that displays an existing value and makes it editable
+ if the user has the necessary permissions.</p>
+<p>It works for all value types by choosing the apt value component in its template:</p>
+<pre><code class="language-html">&lt;span [ngSwitch]=&quot;valueTypeOrClass&quot;&gt;
+    &lt;dsp-text-value-as-string class=&quot;parent-value-component&quot; #displayVal *ngSwitchCase=&quot;'ReadTextValueAsString'&quot; [mode]=&quot;mode&quot; [displayValue]=&quot;displayValue&quot;&gt;&lt;/dsp-text-value-as-string&gt;
+    &lt;dsp-text-value-as-html class=&quot;parent-value-component&quot; #displayVal *ngSwitchCase=&quot;'ReadTextValueAsHtml'&quot; [mode]=&quot;mode&quot; [displayValue]=&quot;displayValue&quot;&gt;&lt;/dsp-text-value-as-html&gt;
+    &lt;dsp-int-value class=&quot;parent-value-component&quot; #displayVal *ngSwitchCase=&quot;constants.IntValue&quot; [mode]=&quot;mode&quot; [displayValue]=&quot;displayValue&quot;&gt;&lt;/dsp-int-value&gt;
+    ...
+&lt;/span&gt;
+</code></pre>
+<p>The value component's selector is chosen from <code>valueTypeOrClass</code>. Since all value components share the same interface, they can all be handled alike.</p>
+<p>Value components may have additional specific inputs for configuration that can be handled in <code>DisplayEditComponent</code>'s template as well
+,e.g., additional configuration of how do display a date.</p>
+<h3 id="integration-of-ckeditor">Integration of CKEditor</h3>
+<h4 id="general-setup">General Setup</h4>
+<p>To edit XML, the viewer module relies on CKEditor. <code>TextValueAsXMLComponent</code> integrates the CKEditor library for Angular.
+In addition, a custom build of CKEditor is needed which is accessible on <a href="https://github.com/dasch-swiss/ckeditor_custom_build">GitHub</a>.
+To make a new custom build, follow the <a href="https://github.com/dasch-swiss/ckeditor_custom_build/blob/master/how-to-build.md">instructions</a>.</p>
+<p>Note that currently only the standard mapping is supported.</p>
+<h4 id="handling-internal-links-when-displaying-text">Handling Internal Links When Displaying Text</h4>
+<p>When a text created with CKEditor is shown in read-mode, click and hover events on internal links can be reacted to by applying the directive <code>TextValueHtmlLinkDirective</code> with the selector <code>dspHtmlLink</code>.
+Internal links have the class "salsah-link".</p>
+<h3 id="integration-of-the-matdatepicker">Integration of the MatDatepicker</h3>
+<p>The <code>MatDatepicker</code> cannot be used as part of the CRUD UI components due to its limitations in terms of precision and era selection.
+As a replacement, <code>DateInputTextComponent</code> is being used allowing for year, month, and day precision and era selection.</p>
+<h2 id="search-module">Search Module</h2>
+<p>The search module allows different ways of searching in order to make simple or complex searches in DSP-API.
+This module contains various components you can use to search and all of them can either be used individually or in combination with one another using the search panel.</p>
+<h3 id="search-panel">Search-panel</h3>
+<p>This is a fully-customizable panel that allows you to assemble the search components and the filters you need in a configurable way. You can set the following parameters defined as <code>@Inputs</code> in dsp-search-panel:</p>
+<ul>
+<li>route: string; url-route for search results</li>
+<li>filterbyproject: string; project iri to limit search results to a specific project</li>
+<li>projectfilter: boolean; provides a drop-down menu of all available projects allowing the user to choose which project to search in</li>
+<li>advanced: boolean; additional menu with advanced search</li>
+<li>expert: boolean;  additional menu with expert search / Gravsearch "editor"</li>
+</ul>
+<p>If everything is set to false or undefined, the search-panel will be a simple full-text search.</p>
+<h3 id="fulltext-search">Fulltext search</h3>
+<p>The full text search quickly finds all instances of a term in DSP-API. It can be restricted to a certain project.</p>
+<h3 id="expert-search">Expert search</h3>
+<p>The expert search is a textarea which allows you to manually write Gravsearch queries if you are comfortable with the language and want more precise results. The textarea content contains a default Gravsearch query as an example for the user. It is possible to reset the field back to the default query.</p>
+<h3 id="advanced-search">Advanced search</h3>
+<p>The advanced search is a search form that allows for the specification of a resource class and and the values of its properties
+to create a Gravsearch query.</p>
+<h4 id="structure">Structure</h4>
+<p>The advanced search consists of the following components:</p>
+<ul>
+<li><code>AdvancedSearchComponent</code>: Main form: Reset and submit buttons, buttons to add and remove properties.</li>
+<li><code>SelectOntologyComponent</code>: Select an ontology from a list.</li>
+<li><code>ResourceAndPropertySelectionComponent</code>: Parent component that contains <code>SelectResourceClassComponent</code> and <code>SelectPropertyComponent</code> for recursive reuse.<ul>
+<li><code>SelectResourceClassComponent</code>: Select a resource class from a list.</li>
+<li><code>SelectPropertyComponent</code>: Select a property from a list.<ul>
+<li><code>SpecifyPropertyValueComponent</code>: Specify a comparison operator and a value for a chosen property.</li>
+<li><code>SearchBooleanValueComponent</code>: Specify a Boolean value.</li>
+<li><code>SearchDateValueComponent</code>: Specify a date value.</li>
+<li><code>SearchDecimalValueComponent</code>: Specify a decimal value.</li>
+<li><code>SearchIntegerValueComponent</code>: Specify an integer value.</li>
+<li><code>SearchLinkValueComponent</code>: Specify the target of a link property.</li>
+<li><code>SearchResourceComponent</code>: Specify the class and/or properties of a linked resource (uses <code>ResourceAndPropertySelectionComponent</code>, see below).</li>
+<li><code>SearchListValueComponent</code>: Specify a list value.<ul>
+<li><code>SearchDisplayListComponent</code>: Displays the children of a list node recursively.</li>
+</ul>
+</li>
+<li><code>TextValueComponent</code>: Specify a text value.</li>
+<li><code>UriValueComponent</code>: Specify a URI value.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="component-interaction">Component Interaction</h4>
+<p>The <code>AdvancedSearchComponent</code>' reacts to the selection of an ontology via the <code>@Output</code> of <code>SelectOntologyComponent</code>.
+When an ontology is selected, <code>AdvancedSearchComponent</code> initialises the resource classes and properties of the selected ontology.
+These are then displayed with <code>SelectResourceClassComponent</code> and <code>SelectPropertyComponent</code> respectively.
+When initialised, <code>AdvancedSearchComponent</code> only shows the ontology selection.</p>
+<p>The choice of a resource class is optional. When a resource class is chosen, <code>AdvancedSearchComponent</code> reacts to this via the <code>@Output</code> of <code>SelectResourceClassComponent</code>.
+The properties of the chosen resource class are then displayed in <code>SelectPropertyComponent</code>. The selection of a resource class can be undone ("no selection").</p>
+<p>When a property is chosen, a comparison operator can be specified.
+Once a comparison operator is specified other than "EXISTS", a value can be specified using <code>SpecifyPropertyValueComponent</code>.
+Depending on the value type of the property, <code>SpecifyPropertyValueComponent</code> chooses the apt component to let the user enter a value.</p>
+<h5 id="recursive-use-of-resourceandpropertyselectioncomponent">Recursive Use of ResourceAndPropertySelectionComponent</h5>
+<p><code>ResourceAndPropertySelectionComponent</code> is used in the main form and in <code>SearchResourceComponent</code>'s template (if the user chooses the operator <code>Match</code> for a linking property)
+to allow for searching linked resources by specifying their class and/or properties.</p>
+<p>Only one level of recursion is allowed, i.e. linking properties on the linked resource <strong>cannot</strong> use the <code>Match</code> operator.</p>
+<p>Sort criteria can only be chosen on the level of the main resource. 
+The boolean <code>@Input</code> <code>toplevel</code> distinguishes the top level from the level below.</p>
+<h4 id="form-validation">Form Validation</h4>
+<p><code>AdvancedSearchComponent</code> creates the main form that is then passed down to the child components.
+Each child component that requires form validation creates an own form which is attached to the main form using <code>addControl</code> on the main <code>FormGroup</code>.
+When a component is destroyed or reinitialised, the component's form is removed using <code>removeControl</code> on the main <code>FormGroup</code>.
+<strong>Both adding and removing to and from the main <code>FormGroup</code> have to be performed as async tasks
+to avoid <a href="https://indepth.dev/everything-you-need-to-know-about-the-expressionchangedafterithasbeencheckederror-error/">check detection errors</a></strong>.</p>
+<p>The query can only be submitted if the main form is valid. Some additional logic is handled in <code>AdvancedSearchComponent</code>'s method <code>validateForm</code>.</p>
+<h4 id="query-generation">Query Generation</h4>
+<p><code>AdvancedSearchComponent</code> gets the IRI of the specified resource class, if any.
+It also gets an array of properties with their values (<code>PropertyWithValue[]</code>) to search for.
+These are then converted to a Gravsearch query using a service.</p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2021-07-16
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../" title="How to contribute" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                How to contribute
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../docs-documentation/" title="Docs Documentation" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Docs Documentation
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2017 - 2021 <a href='https://dasch.swiss' target='_blank'>Data and Service Center for the Humanities (DaSCH)</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../../assets/javascripts/bundle.aa3f9871.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.tabs', 'navigation.sections'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

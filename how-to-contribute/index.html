@@ -1,0 +1,1376 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/icons/dasch-favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.1">
+    
+    
+      
+        <title>How to contribute - DSP-UI documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#7e56c2">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../assets/style/theme.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-contribute-to-this-project" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="DSP-UI documentation" class="md-header-nav__button md-logo" aria-label="DSP-UI documentation">
+      
+  <img src="../assets/icons/dasch-icon-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            DSP-UI documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              How to contribute
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/dasch-swiss/dsp-ui-lib/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dasch-swiss/dsp-ui-lib
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        Introduction
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../how-to-use/getting-started/" class="md-tabs__link">
+          User Guide
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          Contribution
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DSP-UI documentation" class="md-nav__button md-logo" aria-label="DSP-UI documentation">
+      
+  <img src="../assets/icons/dasch-icon-white.svg" alt="logo">
+
+    </a>
+    DSP-UI documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/dasch-swiss/dsp-ui-lib/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dasch-swiss/dsp-ui-lib
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      User Guide
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        User Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Core module
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Core module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        Core module
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/core/" title="Introduction Core" class="md-nav__link">
+      Introduction Core
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Viewer module
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Viewer module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        Viewer module
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/viewer/" title="Introduction Viewer" class="md-nav__link">
+      Introduction Viewer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/viewer/search-results/" title="Search-results" class="md-nav__link">
+      Search-results
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      Search module
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Search module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon"></span>
+        Search module
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/search/" title="Introduction Search" class="md-nav__link">
+      Introduction Search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/search/search-panel/" title="Search-panel" class="md-nav__link">
+      Search-panel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/search/fulltext-search/" title="Fulltext search" class="md-nav__link">
+      Fulltext search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/search/advanced-search/" title="Advanced search" class="md-nav__link">
+      Advanced search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/search/expert-search/" title="Expert search" class="md-nav__link">
+      Expert search
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Action module
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Action module" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        <span class="md-nav__icon md-icon"></span>
+        Action module
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/action/" title="Introduction Action" class="md-nav__link">
+      Introduction Action
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/action/admin-image/" title="AdminImage" class="md-nav__link">
+      AdminImage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/action/existing-name/" title="ExistingName" class="md-nav__link">
+      ExistingName
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/action/key/" title="Key" class="md-nav__link">
+      Key
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/action/message/" title="Message" class="md-nav__link">
+      Message
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/action/progress-indicator/" title="Progress indicator" class="md-nav__link">
+      Progress indicator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/action/sort-button/" title="SortButton" class="md-nav__link">
+      SortButton
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/action/stringify-string-literal/" title="StringifyStringLiteral" class="md-nav__link">
+      StringifyStringLiteral
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use/action/truncate/" title="Truncate" class="md-nav__link">
+      Truncate
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Contribution
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Contribution" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Contribution
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        How to contribute
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="How to contribute" class="md-nav__link md-nav__link--active">
+      How to contribute
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure-of-this-project" class="md-nav__link">
+    Structure of this Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nodejs" class="md-nav__link">
+    Node.js
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npm-package-manager" class="md-nav__link">
+    NPM package manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dsp-api" class="md-nav__link">
+    DSP-API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-steps" class="md-nav__link">
+    First Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts-for-development" class="md-nav__link">
+    Scripts For Development
+  </a>
+  
+    <nav class="md-nav" aria-label="Scripts For Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    Building
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#library-build-options" class="md-nav__link">
+    Library Build Options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-tests-and-e2e-tests" class="md-nav__link">
+    Unit Tests and E2E Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dsp-ui-library-developement" class="md-nav__link">
+    DSP-UI Library Developement
+  </a>
+  
+    <nav class="md-nav" aria-label="DSP-UI Library Developement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-new-components-etc-to-the-library" class="md-nav__link">
+    Adding New Components etc. to the Library
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo-application-playground" class="md-nav__link">
+    Demo Application (Playground)
+  </a>
+  
+    <nav class="md-nav" aria-label="Demo Application (Playground)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-new-component-to-the-demo-application" class="md-nav__link">
+    Adding New Component to the Demo Application
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-application-locally-in-dev-mode-with-live-reloading" class="md-nav__link">
+    Run the Application Locally in Dev Mode With Live Reloading
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-application-in-productive-mode" class="md-nav__link">
+    Run the Application in Productive Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-and-run-the-application-in-docker" class="md-nav__link">
+    Build and Run the Application in Docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-of-the-library" class="md-nav__link">
+    Architecture of the Library
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-publishing-of-dsp-ui" class="md-nav__link">
+    Local Publishing of DSP-UI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish-a-new-version-of-the-library-to-npm" class="md-nav__link">
+    Publish a New Version of the Library to NPM
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="design-documentation/" title="Design Documentation" class="md-nav__link">
+      Design Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="docs-documentation/" title="Docs Documentation" class="md-nav__link">
+      Docs Documentation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="release-notes/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure-of-this-project" class="md-nav__link">
+    Structure of this Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nodejs" class="md-nav__link">
+    Node.js
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npm-package-manager" class="md-nav__link">
+    NPM package manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dsp-api" class="md-nav__link">
+    DSP-API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-steps" class="md-nav__link">
+    First Steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts-for-development" class="md-nav__link">
+    Scripts For Development
+  </a>
+  
+    <nav class="md-nav" aria-label="Scripts For Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    Building
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#library-build-options" class="md-nav__link">
+    Library Build Options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-tests-and-e2e-tests" class="md-nav__link">
+    Unit Tests and E2E Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dsp-ui-library-developement" class="md-nav__link">
+    DSP-UI Library Developement
+  </a>
+  
+    <nav class="md-nav" aria-label="DSP-UI Library Developement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-new-components-etc-to-the-library" class="md-nav__link">
+    Adding New Components etc. to the Library
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo-application-playground" class="md-nav__link">
+    Demo Application (Playground)
+  </a>
+  
+    <nav class="md-nav" aria-label="Demo Application (Playground)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-new-component-to-the-demo-application" class="md-nav__link">
+    Adding New Component to the Demo Application
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-application-locally-in-dev-mode-with-live-reloading" class="md-nav__link">
+    Run the Application Locally in Dev Mode With Live Reloading
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-application-in-productive-mode" class="md-nav__link">
+    Run the Application in Productive Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-and-run-the-application-in-docker" class="md-nav__link">
+    Build and Run the Application in Docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-of-the-library" class="md-nav__link">
+    Architecture of the Library
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-publishing-of-dsp-ui" class="md-nav__link">
+    Local Publishing of DSP-UI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish-a-new-version-of-the-library-to-npm" class="md-nav__link">
+    Publish a New Version of the Library to NPM
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/dasch-swiss/dsp-ui-lib/blob/main/docs/how-to-contribute/index.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="how-to-contribute-to-this-project">How to Contribute to this Project</h1>
+<p>If you are interested in contributing to this project,
+please read our <a href="https://docs.dasch.swiss/developers/dsp/contribution/">general DSP contribution guidelines</a> first.</p>
+<h2 id="structure-of-this-project">Structure of this Project</h2>
+<p>This project consists of two main parts:</p>
+<ol>
+<li>The Angular library <code>DSP-UI (@dasch-swiss/dsp-ui)</code> in <code>project/dsp-ui</code>.</li>
+<li>The demo Angular Application (Playground) in <code>src/app</code>.</li>
+</ol>
+<p>The Angular library contains the code that is published on NPM.
+The demo Angular application's purpose is to demonstrate the library's functionality.
+The library needs to be built first in order to use it within the demo application.</p>
+<p>The demo application uses the <strong>locally built version</strong> of <code>@dasch-swiss/dsp-ui</code>
+which is configured in <a href="https://github.com/dasch-swiss/dsp-ui-lib/blob/main/tsconfig.json">tsconfig.json</a> (<code>compilerOptions.paths</code>),
+see <a href="https://angular.io/guide/creating-libraries#building-and-rebuilding-your-library">Angular docs</a>.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<h3 id="nodejs">Node.js</h3>
+<p>Angular requires a <a href="https://angular.io/guide/setup-local#prerequisites">current, active LTS, or maintenance LTS</a> version of Node.js.</p>
+<p>We recommend using <a href="https://www.npmjs.com/package/n">n</a>,
+a tool that installs and manages Node.js versions on your local system.</p>
+<h3 id="npm-package-manager">NPM package manager</h3>
+<p>Angular requires the <a href="https://angular.io/guide/setup-local#prerequisites">npm package manager</a>.</p>
+<h3 id="dsp-api">DSP-API</h3>
+<p>The demo application requires a running instance of
+<a href="https://docs.knora.org/04-publishing-deployment/getting-started/">DSP-API (Knora)</a>
+compatible with the version defined in <a href="https://github.com/dasch-swiss/dsp-ui-lib/blob/main/vars.mk">vars.mk</a>: <!-- BEGIN INCLUDE ../../vars.mk   -->
+ API_VERSION := v13.3.1</p>
+<!-- END INCLUDE -->
+
+<h2 id="first-steps">First Steps</h2>
+<p>Clone this repository:</p>
+<pre><code class="language-shell">git clone https://github.com/dasch-swiss/dsp-ui-lib/
+</code></pre>
+<p>Install the dependencies with:</p>
+<pre><code class="language-shell">npm install
+</code></pre>
+<p>Build the library with:</p>
+<pre><code class="language-shell">npm run build-lib
+</code></pre>
+<p>Run the demo application:</p>
+<pre><code class="language-shell">ng s
+</code></pre>
+<p>And access <code>http://localhost:4200</code> in your browser.</p>
+<h2 id="scripts-for-development">Scripts For Development</h2>
+<p>The following scripts can be used for development:</p>
+<h3 id="testing">Testing</h3>
+<ul>
+<li><code>npm test</code>: runs the unit tests of the demo application and the lib's unit tests.</li>
+<li><code>npm test-lib</code>: runs the lib's unit tests in headless mode (no browser UI).</li>
+<li><code>npm test-lib-local</code>: runs the lib's unit test with the browser UI (for local development of the lib).</li>
+<li><code>npm run webdriver-update</code>: installs Chrome webdriver in the required version for the E2E tests.</li>
+<li><code>npm run e2e</code>: runs the E2E tests from the demo application, see section <a href="#unit-tests-and-e2e-tests">Unit Tests and E2E Tests</a>.</li>
+</ul>
+<h3 id="building">Building</h3>
+<ul>
+<li><code>npm run build-lib</code>: builds the lib in productive mode</li>
+<li><code>npm run build-lib-dev</code>: builds the lib in development mode</li>
+<li><code>npm build-app</code>: builds the demo application in productive mode</li>
+<li><code>npm run yalc-publish-lib</code>: builds the lib and publishes it locally using <a href="https://www.npmjs.com/package/yalc">yalc</a>.</li>
+</ul>
+<h2 id="library-build-options">Library Build Options</h2>
+<p>The library is built in productive mode for publication, using <a href="https://github.com/dasch-swiss/dsp-ui-lib/blob/main/projects/dsp-ui/tsconfig.lib.prod.json">tsconfig.lib.prod.json</a>.</p>
+<p>To perform additional checks during development, the library can be built in development mode,
+using <a href="https://github.com/dasch-swiss/dsp-ui-lib/blob/main/projects/dsp-ui/tsconfig.lib.json">tsconfig.lib.json</a>. Development builds use Ivy and perform <a href="https://angular.io/guide/template-typecheck#template-type-checking">strict template checks</a>.</p>
+<h2 id="unit-tests-and-e2e-tests">Unit Tests and E2E Tests</h2>
+<p>There are unit tests for the lib (<code>projects/dsp-ui/src</code>)
+and some basic unit tests for the demo application playground components (<code>src/app</code>).</p>
+<p>The E2E tests have to be run from the demo application.
+Unlike the unit tests, they require a running instance of DSP-API compatible with the release specified in <a href="https://github.com/dasch-swiss/dsp-ui-lib/blob/main/vars.mk">vars.mk</a>: <!-- BEGIN INCLUDE ../../vars.mk   -->
+ API_VERSION := v13.3.1</p>
+<!-- END INCLUDE -->
+<p>Before running the E2E tests, reload the data in DSP-API's db.
+The E2E tests can be run as follows:</p>
+<ul>
+<li><code>npm run webdriver-update</code></li>
+<li><code>npm run e2e</code></li>
+</ul>
+<h2 id="dsp-ui-library-developement">DSP-UI Library Developement</h2>
+<h3 id="adding-new-components-etc-to-the-library">Adding New Components etc. to the Library</h3>
+<p>Install <a href="https://angular.io/cli">Angular CLI</a> globally:</p>
+<pre><code class="language-shell"> npm install -g @angular/cli
+</code></pre>
+<p>To add additional components etc. to a module of the library, run:</p>
+<pre><code class="language-shell">ng generate component [path/in/the/module/][name-of-component] --project @dasch-swiss/dsp-ui
+</code></pre>
+<p>For example, to create a new component <code>test</code> in the action module, run:</p>
+<pre><code class="language-shell">ng generate component action/test --project @dasch-swiss/dsp-ui
+</code></pre>
+<p>This command will create a folder called <code>test</code> inside of <code>projects/dsp-ui/src/lib/action/</code> containing the component's class, template, style, and spec files.</p>
+<p>Before testing the new component inside of the demo app, you have to rebuild it after each change:</p>
+<pre><code class="language-shell">npm run build-lib
+</code></pre>
+<p>Alternatively, you can use <a href="#run-the-application-locally-in-dev-mode-with-live-reloading">Live Reloading</a>.</p>
+<h2 id="demo-application-playground">Demo Application (Playground)</h2>
+<h3 id="adding-new-component-to-the-demo-application">Adding New Component to the Demo Application</h3>
+<p>The demo app demonstrates the functionality of dsp-ui-lib's modules.
+By default, the demo app's main component routes to the page demonstrating the resource viewer in read mode.</p>
+<p>Before adding a new component to the demo app,
+check if the desired demo could be added to an existing component of the demo app.</p>
+<p>Follow these steps to add a new component to the demo app:</p>
+<ul>
+<li>create a new component in the demo app:</li>
+<li>create a new component using Angular CLI in <code>src/app</code></li>
+<li>demonstrate a part of dsp-ui-lib (component, service etc.) in the new component of the demo app</li>
+<li>in <code>AppRoutingModule</code> and <code>AppComponent</code>'s template, set up the routing for your new component in the demo app.</li>
+</ul>
+<h3 id="run-the-application-locally-in-dev-mode-with-live-reloading">Run the Application Locally in Dev Mode With Live Reloading</h3>
+<p>To make changes to the DSP-UI and have your changes reflected immediately upon saving, follow these steps:</p>
+<ul>
+<li>run <code>npm run build-watchful-lib-dev</code> from the project root directory.</li>
+<li>open a new tab and run <code>npm run start</code> from the project root directory.</li>
+<li>Or if you want to connect to the DSP-API on our test server run <code>ng serve --configuration=test-server</code> or
+  <code>npm run start-with-test-server</code>. Please consider which version of DSP-API is currently running on the
+  test server (see webapi: <a href="https://api.test.dasch.swiss/version">https://api.test.dasch.swiss/version</a>).
+  Please note that this option is suitable when working on viewer or search module. In some cases
+  like <code>/read</code>, <code>/modify</code>, etc. it doesn't work because it has an automatic login for the root user,
+  which is locked on the test server.</li>
+<li>now, anytime you make a change to DSP-UI and save, the library will be re-built and the webpage will
+  refresh and you will see the changes.</li>
+</ul>
+<h3 id="run-the-application-in-productive-mode">Run the Application in Productive Mode</h3>
+<p>To simulate a production environment, the application should be built with optimization and served locally
+(not in dev mode, but from a local web server).</p>
+<ul>
+<li>Install <code>nginx</code> on your system, e.g. <code>brew install nginx</code> for mac OS. Check the <a href="https://linux.die.net/man/8/nginx">documentation</a> for more information.</li>
+<li>Create a configuration file for the test application.
+    The example defines a configuration file <code>/usr/local/etc/nginx/servers/dspuiapp.conf</code> for macOS.
+    Substitute <code>$abs_path_to_lib</code> with the actual absolute path on your system pointing to the project root.
+    Substitute <code>$dsp-ui_folder_name</code> with the folder name of the app build in <code>dist</code>.</li>
+</ul>
+<pre><code class="language-nginx">    server {
+            listen 8090;
+            server_name dspuiapp.local;
+            root /$abs_path_to_lib/dist/$dsp-ui_folder_name;
+
+            location / {
+                        try_files $uri $uri/ /index.html;
+            }
+
+        access_log /usr/local/etc/nginx/logs/dspuiapp.local.access.log;
+    }
+</code></pre>
+<ul>
+<li>Add an entry to your <code>/etc/hosts</code>: <code>127.0.0.1 dspuiapp.local</code></li>
+<li>Create an empty file <code>dspuiapp.local.access.log</code> in <code>/usr/local/etc/nginx/logs</code>
+    (you might have to create the folder <code>logs</code> first)</li>
+<li>Start <code>nginx</code> (if <code>nginx</code> is already running, stop it first: <code>nginx</code>: <code>nginx -s stop</code>)</li>
+<li>Build the library: <code>npm run build-lib</code></li>
+<li>Build the test app with optimization: <code>npm run build-app</code></li>
+<li>Access it via <a href="http://dspuiapp.local:8090">http://dspuiapp.local:8090</a></li>
+</ul>
+<h3 id="build-and-run-the-application-in-docker">Build and Run the Application in Docker</h3>
+<p>To build and run the application in Docker, do the following:</p>
+<ol>
+<li><code>docker build --tag app:0.1 .</code> (you can use any tag name you want)</li>
+<li><code>docker run -v ~/localdir/config.prod.json:/public/config/config.prod.json --publish 4200:4200 --detach --name myname app:0.1</code></li>
+</ol>
+<p>The first step builds the lib and app in Docker. Make sure to delete the contents of the <code>dist</code> folder on your local system first.</p>
+<p>The second step runs a container based on the image built in the previous step:</p>
+<ul>
+<li><code>-v</code> mounts a config file from your local file system in the Docker container, so you can set the config.</li>
+<li><code>--publish</code> maps the port on your local machine to the port in the Docker container.</li>
+</ul>
+<p>You can now access the app on your local machine under <a href="http://localhost:4200/">http://localhost:4200/</a>.</p>
+<h2 id="architecture-of-the-library">Architecture of the Library</h2>
+<p>See <a href="design-documentation/">design documentation</a>.</p>
+<h2 id="local-publishing-of-dsp-ui">Local Publishing of DSP-UI</h2>
+<p>The demo application uses the locally built version of DSP-UI, see the repository's <a href="#structure-of-this-project">structure</a>.</p>
+<p>If you want to install an unpublished version of DSP-UI in your Angular application, you can use <a href="https://www.npmjs.com/package/yalc">yalc</a>.
+<code>yalc</code> publishes DSP-UI to a local store.</p>
+<p>Install <code>yalc</code>:</p>
+<pre><code class="language-shell">npm install yalc -g
+</code></pre>
+<p>Build the library and publish it to the local store:</p>
+<pre><code class="language-shell">npm run build-app
+npm run yalc-publish-lib
+</code></pre>
+<p>Add the local build your Angular application:</p>
+<pre><code class="language-shell">yalc add @dasch-swiss/dsp-ui
+npm install
+</code></pre>
+<p>To remove it from your project and restore <code>package.json</code>, run:</p>
+<pre><code class="language-shell">yalc remove --all
+</code></pre>
+<h2 id="publish-a-new-version-of-the-library-to-npm">Publish a New Version of the Library to NPM</h2>
+<p>Please follow the general DSP documentation about the release process: <a href="https://docs.dasch.swiss/developers/dsp/contribution/#prepare-release">prepare</a> and <a href="https://docs.dasch.swiss/developers/dsp/contribution/#create-release">publish</a>.</p>
+<p>Before publishing:</p>
+<ul>
+<li>
+<p>Update documentation if necessary and commit the changes</p>
+</li>
+<li>
+<p>Be sure that all dependencies to DSP-JS-LIB and DSP-API are set to the correct version:</p>
+</li>
+<li>Update DSP-API version in <code>vars.mk</code></li>
+<li>Update DSP-JS version in <code>package.json</code> and run <code>npm install</code> to update the <code>package-lock.json</code></li>
+<li>Update DSP-JS version in section <code>peerDependencies</code> of <code>projects/dsp-ui/package.json</code></li>
+</ul>
+<p>A new version will be published with each github release as it's part of github actions' workflow. To make a new release, you have to merge the open release PR as described <a href="https://docs.dasch.swiss/developers/dsp/contribution/#create-release">here</a>.</p>
+<p>The new package will be available on <a href="https://www.npmjs.com/package/@dasch-swiss/dsp-ui">https://www.npmjs.com/package/@dasch-swiss/dsp-ui</a>.</p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2021-07-16
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../how-to-use/action/truncate/" title="Truncate" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Truncate
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="design-documentation/" title="Design Documentation" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Design Documentation
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; 2017 - 2021 <a href='https://dasch.swiss' target='_blank'>Data and Service Center for the Humanities (DaSCH)</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../assets/javascripts/bundle.aa3f9871.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.tabs', 'navigation.sections'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
